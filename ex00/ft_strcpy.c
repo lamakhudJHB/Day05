@@ -6,13 +6,17 @@
 /*   By: lamakhud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 13:54:23 by lamakhud          #+#    #+#             */
-/*   Updated: 2020/07/15 13:56:05 by lamakhud         ###   ########.fr       */
+/*   Updated: 2020/07/17 11:10:29 by lamakhud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 char *ft_strcpy(char *dest, char *src){
-	strcpy(*dest, *src);
+	int i;
+	while(dest[i] != '\0'){
+		src[i] = dest[i];
+		i++;
+	}
 	return *src;
 }
